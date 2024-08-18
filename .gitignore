@@ -1,6 +1,6 @@
 .env
-/__pycache__
-/router/__pycache__
-/init/__pycache__
-/db/__pycache__
-/config/__pycache__
+/__pycache__/
+/router/__pycache__/
+/init/__pycache__/
+/db/__pycache__/
+/config/__pycache__/
