@@ -4,10 +4,10 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_core.documents import Document
 import uuid
 from dotenv import load_dotenv
-import qdrant_client
-from qdrant_client import models
 from langchain_community.vectorstores import Qdrant
 import os
+import qdrant_client
+from qdrant_client import models
 
 load_dotenv()
 retriever_multi_vector_img = None

@@ -58,11 +58,12 @@ def img_prompt_func(data_dict):
         {
             "type": "text",
             "text": (
-            "You are tasked with providing an answer to the user's question.\n"
-            "Your primary responsibility is to fulfill the user's query as long as it is relevant to the context. If the query falls outside the context, simply respond that you don't know.\n"
-            "You should solely answer the question based on the facts/context given. If you dont know, just say you don't know."
+            "You are tasked with providing a detailed answer to the user's question.\n"
+            "You will be given a mix of text, tables, and images (usually charts or graphs).\n"
+            "Use all available information to answer the user's question based on the facts and context provided.\n"
+            "Incorporate any relevant graphs, tables, or images into your explanation to support your response.\n"
             f"User-provided question: {data_dict['question']}\n\n"
-            "Context:\n"
+            "Text, tables, and images:\n"
             f"{formatted_texts}"
         ),
         }

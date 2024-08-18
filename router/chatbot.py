@@ -34,16 +34,7 @@ async def streaming_chatbot(websocket: WebSocket):
                             content=[
                                 {
                                     "type": "text",
-                                    "text": f"""
-                                    
-                                        Generate a detailed context based on the images provided by the user. 
-                                        The context should be clear and relevant to the user's query, 
-                                        which will be passed to another LLM for retrieval purposes. 
-                                        Craft a concise query and context that accurately reflects the user's input and the content of the images, 
-                                        ensuring optimal results in the subsequent retrieval process.
-
-                                        User's query: {message}
-                                    """,   
+                                    "text": "Explain this image"   
                                 },
                                 {
                                     "type": "image_url",

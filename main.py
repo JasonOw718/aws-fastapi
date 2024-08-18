@@ -3,9 +3,12 @@ from db.database import engine
 from fastapi import FastAPI
 from router import chatbot, initialize
 from fastapi.middleware.cors import CORSMiddleware
-
+import qdrant_client
+from qdrant_client import models
 from pymongo.mongo_client import MongoClient
 import os
+
+
 uri = os.getenv("MONGO_DB_URI")
     
 app = FastAPI()
