@@ -7,7 +7,7 @@ import qdrant_client
 from qdrant_client import models
 from pymongo.mongo_client import MongoClient
 import os
-
+import nltk
 
 uri = os.getenv("MONGO_DB_URI")
     
@@ -18,6 +18,7 @@ app.include_router(chatbot.router)
 client = MongoClient(uri)
 
 try:
+    nltk.download()
     client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
