@@ -5,8 +5,8 @@ from router import chatbot, initialize
 from fastapi.middleware.cors import CORSMiddleware
 
 from pymongo.mongo_client import MongoClient
-
-uri = "mongodb+srv://kashengow:VgBNULFXFxEIyrwn@cluster0.s8hgq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+import os
+uri = os.getenv("MONGO_DB_URI")
     
 app = FastAPI()
 app.include_router(initialize.router)
@@ -21,7 +21,7 @@ except Exception as e:
     print(e)
 
 origins = [
-    "http://localhost:5173"
+    os.getenv("API_URL")
 ]
 
 app.add_middleware(
