@@ -7,7 +7,6 @@ import qdrant_client
 from qdrant_client import models
 from pymongo.mongo_client import MongoClient
 import os
-import nltk
 
 
 uri = os.getenv("MONGO_DB_URI")
@@ -36,7 +35,6 @@ app.add_middleware(
     allow_credentials = True
 )
 
-nltk.download('wordnet')
 
 Base.metadata.create_all(engine)
 
