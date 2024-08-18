@@ -18,7 +18,7 @@ app.include_router(chatbot.router)
 client = MongoClient(uri)
 
 try:
-    nltk.download()
+    nltk.download("wordnet")
     client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
